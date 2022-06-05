@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="partFirst">
+            <div class="partFirst__header">
+                <div class="partFirst__header--wrapper">
+                    <span class="avtWrapper">
+                        <img class="partFirst__header--avt avt" src="https://scontent.fhan5-1.fna.fbcdn.net/v/t39.30808-6/284800523_324600786549235_6932104038957173623_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Mxl_kPu-QUsAX8yjLk9&_nc_ht=scontent.fhan5-1.fna&oh=00_AT9_3DSQzHVWagBZqJ1rMDIA_ArUBwFnLI6rQHXCzAeJJQ&oe=62A0F214" alt="">
+                    </span>
+                    <p class="partFirst__header--logo">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>Chatting</span>
+                    </p>
+                    <i class="fa-solid fa-bars partFirst__header--setting cursorPointer"></i>
+                </div>
+                <div class="partFirst__header--search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm đoạn chat">
+                </div>
+            </div>
+            <div class="partFirst__body">
+                <ul class="inboxList" id="">
+                    <li id="" class="inboxList__Item inboxList__Item--notSeen">
+                        <span class="avtWrapper--online">
+                            <img class="inboxList__Item--avt avt avt--online" src="https://scontent.fhan5-1.fna.fbcdn.net/v/t39.30808-6/284800523_324600786549235_6932104038957173623_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Mxl_kPu-QUsAX8yjLk9&_nc_ht=scontent.fhan5-1.fna&oh=00_AT9_3DSQzHVWagBZqJ1rMDIA_ArUBwFnLI6rQHXCzAeJJQ&oe=62A0F214" alt="">
+                        </span>
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Trịnh Văn Sơn</p>
+                                <p class="inboxList__Item--lastMessage subTitle">bạn: khi nội dung quá dài sẽ tự động ẩn và thêm dấu 3 chấm</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    <li id="" class="inboxList__Item inboxList__Item--notSeen">
+                        <img class="inboxList__Item--avt avt" src="data:image/jpeg;base64,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" alt="">
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Elonmusk</p>
+                                <p class="inboxList__Item--lastMessage subTitle">bạn: byebye</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    <li id="" class="inboxList__Item">
+                        <img class="inboxList__Item--avt avt avt--online" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt="">
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Bùi Xuân Huấn</p>
+                                <p class="inboxList__Item--lastMessage subTitle">Bùi Xuân Huấn: khong làm mà đòi có ăn</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    <li id="" class="inboxList__Item">
+                        <img class="inboxList__Item--avt avt avt--online" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt="">
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Bùi Xuân Huấn</p>
+                                <p class="inboxList__Item--lastMessage subTitle">Bùi Xuân Huấn: khong làm mà đòi có ăn</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    <li id="" class="inboxList__Item">
+                        <img class="inboxList__Item--avt avt avt--online" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt="">
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Bùi Xuân Huấn</p>
+                                <p class="inboxList__Item--lastMessage subTitle">Bùi Xuân Huấn: khong làm mà đòi có ăn</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    <li id="" class="inboxList__Item">
+                        <img class="inboxList__Item--avt avt avt--online" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt="">
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Bùi Xuân Huấn</p>
+                                <p class="inboxList__Item--lastMessage subTitle">Bùi Xuân Huấn: khong làm mà đòi có ăn</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    <li id="" class="inboxList__Item">
+                        <img class="inboxList__Item--avt avt avt--online" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt="">
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Bùi Xuân Huấn</p>
+                                <p class="inboxList__Item--lastMessage subTitle">Bùi Xuân Huấn: khong làm mà đòi có ăn</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    <li id="" class="inboxList__Item">
+                        <img class="inboxList__Item--avt avt avt--online" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt="">
+                        <div class="inboxList__Item--mainWrapper">
+                            <div class="inboxList__Item--subWrapper">
+                                <p class="inboxList__Item--inboxName mainTitle">Bùi Xuân Huấn</p>
+                                <p class="inboxList__Item--lastMessage subTitle">Bùi Xuân Huấn: khong làm mà đòi có ăn</p>
+                            </div>
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="partSecond">
+            <div class="partSecond__header">
+                <div class="partSecond__header--mainWrapper">
+                    <img class="partSecond__header--avt avt" src="https://scontent.fhan5-1.fna.fbcdn.net/v/t39.30808-6/284800523_324600786549235_6932104038957173623_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Mxl_kPu-QUsAX8yjLk9&_nc_ht=scontent.fhan5-1.fna&oh=00_AT9_3DSQzHVWagBZqJ1rMDIA_ArUBwFnLI6rQHXCzAeJJQ&oe=62A0F214" alt="">
+                    <div class="partSecond__header--subWrapper cursorPointer">
+                        <p class="mainTitle">Trịnh Văn Sơn</p>
+                        <p class="member subTitle">
+                            <!-- <i class="fa-solid fa-user"></i>
+                            3 thành viên -->
+                            Đang hoạt động
+                        </p>
+                    </div>
+                </div>
+                <div class="header-chatSetting--wrapper cursorPointer">
+                    <i class="fa-solid fa-ellipsis partSecond__header--chatSetting"></i>
+                </div>
+            </div>
+            <div class="partSecond__body">
+                <ul class="messageList" id="messageList">
+                    <li class="messageList__wrapper messageList__wrapper--yourMessage">
+                        <span class="messageList__item messageList__item--yourMessage">hello</span>
+                    </li>
+                    <li class="messageList__wrapper messageList__wrapper--yourMessage">
+                        <span class="messageList__item messageList__item--yourMessage">hi</span>
+                    </li>
+                    <li class="messageList__wrapper messageList__wrapper--myMessage">
+                        <span class="messageList__item messageList__item--myMessage">có gì mới không</span>
+                    </li>
+                    <li class="messageList__wrapper messageList__wrapper--myMessage">
+                        <span class="messageList__item messageList__item--myMessage">có</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="partSecond__footer">
+                <i class="fa-solid fa-image cursorPointer"></i>
+                <i class="fa-solid fa-microphone cursorPointer"></i>
+                <form action="" onsubmit="sendMessage(event)">
+                    <input type="text" placeholder="Tin nhắn..." class="myMessageInput" id="myMessageInput" autocomplete="off">
+                    <input type="submit" class="myMessageSend" id="myMessageSend">
+                </form>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+        </div>
+        <div class="partThird">
+            <div class="partThird__header cursorPointer">
+                <img class="partThird__header--avt avt" src="https://scontent.fhan5-1.fna.fbcdn.net/v/t39.30808-6/284800523_324600786549235_6932104038957173623_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Mxl_kPu-QUsAX8yjLk9&_nc_ht=scontent.fhan5-1.fna&oh=00_AT9_3DSQzHVWagBZqJ1rMDIA_ArUBwFnLI6rQHXCzAeJJQ&oe=62A0F214" alt="">
+                <span class="partThird__header--titleWrapper">
+                    <p class="mainTitle partThird__header--nameUser">Trịnh Văn Sơn</p>
+                    <p class="subTitle partThird__header--activeStatus">Đang hoạt động</p>
+                </span>
+            </div>
+            <div class="partThird__body">
+                <ul class="inboxSetting">
+                    <li class="cursorPointer">
+                        <div class="inboxSetting__item">
+                            <span class="userSelect--none">Tùy chỉnh đoạn chat</span>
+                            <i class="fa-solid fa-angle-right inboxSetting__item--angleIcon"></i>
+                        </div>
+                        <ul class="inboxSetting--son">
+                            <li class="inboxSetting__item--son">
+                                <i class="fa-solid fa-pencil"></i>
+                                <span>Đổi tên đoạn chat</span>
+                            </li>
+                            <li class="inboxSetting__item--son">
+                                <i class="fa-solid fa-image"></i>
+                                <span>Đổi ảnh</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cursorPointer">
+                        <div class="inboxSetting__item">
+                            <span class="userSelect--none">File</span>
+                            <i class="fa-solid fa-angle-right inboxSetting__item--angleIcon"></i>
+                        </div>
+                        <ul class="inboxSetting--son">
+                            <li class="inboxSetting__item--son">
+                                <i class="fa-solid fa-image"></i>
+                                <span>Ảnh & video</span>
+                            </li>
+                            <li class="inboxSetting__item--son">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>Tệp</span>
+                            </li>
+                            <li class="inboxSetting__item--son">
+                                <i class="fa-solid fa-microphone cursorPointer"></i>
+                                <span>Ghi âm</span>
+                            </li>
+                            <li class="inboxSetting__item--son">
+                                <i class="fa-solid fa-link"></i>
+                                <span>Link</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
