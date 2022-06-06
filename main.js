@@ -4,8 +4,10 @@ var messageList = document.getElementById('messageList'),
     inboxSettingItems = [...document.querySelectorAll('.inboxSetting__item')],
     inboxSettingItem_angleIcons = [...document.querySelectorAll('.inboxSetting__item--angleIcon')],
     inboxSetting_Son = [...document.querySelectorAll('.inboxSetting--son')],
-    chatSettingIcon = document.querySelector('.header-chatSetting--wrapper'),
-    partThird = document.querySelector('.partThird');
+    chatSettingIcons = [...document.querySelectorAll('.header-chatSetting--wrapper')],
+    partSecond = document.querySelector('.partSecond'),
+    partThird = document.querySelector('.partThird')
+    messageList_wrappers = [...document.querySelectorAll('.messageList__wrapper')];
 function totalHeight() {
     var S = 0;
     for (var i of arguments) {
@@ -39,12 +41,28 @@ function isEmptyStr(str) {
 function sendMessage(event) {
     event.preventDefault();
     if (isEmptyStr(myMessageInput.value) == false) {
-        messageList.innerHTML = `
-            ${messageList.innerHTML}
-            <li class="messageList__wrapper messageList__wrapper--myMessage">
-                <span class="messageList__item messageList__item--myMessage">${myMessageInput.value}</span>
-            </li>
-        `
+        if (messageList_wrappers[messageList_wrappers.length - 1].classList.contains('messageList__wrapper--yourMessage')) {
+            messageList.innerHTML = `
+                ${messageList.innerHTML}
+                <li class="messageList__wrapper messageList__wrapper--myMessage">
+                    <span class="messageList__item--wrapper myMessage--wrapper">
+                        <span class="messageList__item messageList__item--myMessage">${myMessageInput.value}</span>
+                        <i class="fa-solid fa-circle-check messageList__item--seen messageList__item--seenIcon"></i>
+                        <!-- <img class="messageList__item--seen avt" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt=""> -->
+                    </span>
+                </li>
+            `
+        }else{
+            messageList_wrappers[messageList_wrappers.length - 1].innerHTML = `
+                ${messageList_wrappers[messageList_wrappers.length - 1].innerHTML}
+                <span class="messageList__item--wrapper myMessage--wrapper">
+                    <span class="messageList__item messageList__item--myMessage">${myMessageInput.value}</span>
+                    <i class="fa-solid fa-circle-check messageList__item--seen messageList__item--seenIcon"></i>
+                    <!-- <img class="messageList__item--seen avt" src="https://s.memehay.com/files/posts/20210515/toan-bo-loi-ran-day-cua-huan-hoa-hong-huan-rose.jpg" alt=""> -->
+                </span>
+            `
+        }
+        messageList_wrappers = [...document.querySelectorAll('.messageList__wrapper')]
         messageList.scrollTo(0, messageList.scrollHeight)
         myMessageInput.value = ''
     }
@@ -68,22 +86,26 @@ inboxList.forEach(function (inboxItem) {
 
 inboxSettingItems.forEach(function (inboxSettingItem, i) {
     inboxSettingItem.onclick = function () {
-        if(inboxSettingItem_angleIcons[i].classList.contains('fa-angle-right')){
+        if (inboxSettingItem_angleIcons[i].classList.contains('fa-angle-right')) {
             inboxSettingItem_angleIcons[i].classList.remove('fa-angle-right')
             inboxSettingItem_angleIcons[i].classList.add('fa-angle-down')
             inboxSetting_Son[i].style.display = 'block'
-        }else{
+        } else {
             inboxSettingItem_angleIcons[i].classList.remove('fa-angle-down')
             inboxSettingItem_angleIcons[i].classList.add('fa-angle-right')
             inboxSetting_Son[i].style.display = 'none'
         }
     }
 })
-function changeDisplay(element){
-    if(element.style.display === 'none'){
-        element.style.display = 'block'
-    }else{
-        element.style.display = 'none'
+
+chatSettingIcons.forEach(function(chatSettingIcon){
+    chatSettingIcon.onclick = function(){
+        if(partThird.style.display === 'block'){
+            partThird.style.display = 'none'
+            partSecond.style.width = '72%'
+        }else{
+            partThird.style.display = 'block'
+            partSecond.style.width = '46%'
+        }
     }
-}
-chatSettingIcon.onclick = changeDisplay(partThird)
+})
